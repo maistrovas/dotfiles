@@ -104,7 +104,7 @@ if [ -f /usr/local/bin/rbenv ]; then
 fi
 
 # Python settings.
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
+# export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 
 # Super useful Docker container oneshots.
 # Usage: dockrun, or dockrun [centos7|fedora24|debian8|ubuntu1404|etc.]
@@ -168,3 +168,11 @@ function blt() {
   fi
 }
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi
+
+#AWS
+export AWS_ACCESS_KEY_ID=$(cat access_key.txt)
+export AWS_SECRET_ACCESS_KEY=$(cat secret.txt)
