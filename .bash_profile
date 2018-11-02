@@ -58,6 +58,13 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gsd='git svn dcommit'
 alias gsfr='git svn fetch && git svn rebase'
 
+# My alias
+alias subl="open -a Sublime\ Text"
+alias prof="subl ~/.bash_profile"
+alias reprof=". ~/.bash_profile"
+alias docker_python="docker --tlsverify --tlscacert=/dockerfiles/py-dev/ca.pem --tlscert=/dockerfiles/py-dev/cert.pem --tlskey=/dockerfiles/py-dev/key.pem -H=148.251.99.194:2376"
+
+
 # Git upstream branch syncer.
 # Usage: gsync master (checks out master, pull upstream, push origin).
 function gsync() {
