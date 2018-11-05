@@ -174,5 +174,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi
 
 #AWS
-export AWS_ACCESS_KEY_ID=$(cat access_key.txt)
-export AWS_SECRET_ACCESS_KEY=$(cat secret.txt)
+export AWS_ACCESS_KEY_ID=$(cat ~/.aws/access_key.txt)
+export AWS_SECRET_ACCESS_KEY=$(cat ~/.aws/secret.txt)
+
+# Ansible
+export ANSIBLE_VAULT_PASSWORD_FILE=/Users/$(whoami)/.ansible/vault_password.txt
